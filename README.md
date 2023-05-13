@@ -37,7 +37,7 @@ The bot can be 'triggered' a number of different ways:
 
 If you have a server with a-lot messages regularly flying about- it is better to set `CHATCHANCE` very high. I recommend setting it to a number you think is 'too high'. The spontaneous messages are part of what makes this bot special; but it is a double-edged sword, as the messages *are* disruptive. It is better if they are isolated to rare-occurances (keep them 'special'). An overly verbose and chatty bot *will* clear a room/kill conversation in a server. Moderation is key.
 
-## Notes on API usage:
+### Notes on API usage:
 
 This app makes use of the `gpt-3.5-turbo` OpenAI model. It is currently the cheapest (and best suited) model available on the platform. At time of writing, it is priced at [$0.002 per 1K tokens](https://openai.com/pricing)
 
