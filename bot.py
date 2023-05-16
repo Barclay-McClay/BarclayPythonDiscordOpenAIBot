@@ -152,7 +152,10 @@ async def on_message(message):
                 chatMessage = chatHistory[i].content.replace("<@"+str(client.user.id)+">", botCharacter['USERNAME']) # change <@4214121251> to <Bot Name>
                 chatMessage = chatHistory[i].author.name + ": " + chatMessage + "\n"
                 if chatHistory[i].embeds:
-                    chatMessage = chatHistory[i].author.name + ": *posts external link with description '" + chatHistory[i].embeds[0].description + "'*\n"
+                    try:
+                        chatMessage = chatHistory[i].author.name + ": *posts external link with description '" + chatHistory[i].embeds[0].description + "'*\n"
+                    except:
+                        chatMessage = chatHistory[i].author.name + ": *posts an embed you cannot read*.'*\n"
                 print(chatMessage)
                 if chatHistory[i].author.id == client.user.id:
                     conversation = ai_response_add(chatMessage, conversation) # AI messages get added as 'assistant'
